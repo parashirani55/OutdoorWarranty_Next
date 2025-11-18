@@ -19,7 +19,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-[100vh] flex items-center justify-center text-white font-poppins overflow-hidden"
+      className="w-full min-h-[100vh] flex items-center justify-center text-white font-poppins overflow-hidden pt-[5rem] md:pt-[2rem]"
       style={{
         backgroundImage: "url('/assets/hero-bg.webp')",
         backgroundSize: "cover",
@@ -31,10 +31,11 @@ export default function Hero() {
 
       {/* Main container */}
       <div className="relative z-10 max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 sm:px-6 pt-36 pb-20 items-center mt-6 sm:mt-10">
+       
         {/* Left Section */}
         <div className="space-y-8 sm:space-y-10 relative">
           {/* “Skip the markup!” */}
-          <div className="absolute -left-16 top-[8%] hidden md:flex flex-col items-center rotate-[-10deg]">
+          <div className="absolute -left-16 xl:-left-15 top-[8%] hidden md:flex flex-col items-center rotate-[-10deg]">
             <span
               className={`${kalam.className} text-[#59d24f] font-normal text-[24px] lg:text-[28px] leading-tight text-center`}
               style={{ transform: "rotate(-15deg)" }}
@@ -73,8 +74,7 @@ export default function Hero() {
               <svg
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[106%] h-auto"
                 viewBox="0 0 450 140"
-              >
-                <ellipse
+              > <ellipse
                   cx="225"
                   cy="70"
                   rx="210"
@@ -105,7 +105,7 @@ export default function Hero() {
           </div>
 
           {/* Review Card */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-5 mt-5 max-w-[700px]">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-5 mt-5 max-w-[700px] !order-last !md:order-none">
             <div className="flex items-center gap-3 sm:gap-4 mb-2">
               <img
                 src="/person/robert_barbell.jpg"
@@ -167,11 +167,7 @@ export default function Hero() {
           </p>
 
           {/* Call Button */}
-          <a
-            href="tel:2694316864"
-            className="relative inline-flex items-center gap-3 bg-[#59d24f] hover:bg-[#40d61e] text-white font-semibold px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full mt-6 transition text-lg sm:text-xl shadow-lg"
-          >
-            <span className="absolute left-8 right-8 bottom-[8px] h-[2px] bg-white"></span>
+          <a href="tel:2694316864" className="relative underline inline-flex items-center gap-3 bg-[#59d24f] hover:bg-[#40d61e] text-white font-semibold px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full mt-6 transition text-lg sm:text-xl shadow-lg">
             <Phone size={20} className="relative z-10" />
             <span className="relative z-10">Call 269-431-6864 Now!</span>
           </a>
@@ -179,6 +175,7 @@ export default function Hero() {
 
         {/* Right Form */}
         <div className="bg-white text-gray-900 rounded-3xl shadow-2xl p-6 sm:p-10 md:p-12 max-w-[600px] mx-auto w-full min-h-[500px] sm:min-h-[640px] flex flex-col justify-center">
+          
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 leading-tight">
             Apply for <span className="text-[#339966]">RV Extended Warranty</span>
           </h2>
@@ -219,6 +216,7 @@ export default function Hero() {
             Get Your RV Warranty in the same day.
           </p>
         </div>
+      
       </div>
 
       {/* Animation for ellipse */}

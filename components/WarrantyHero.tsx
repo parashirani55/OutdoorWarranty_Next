@@ -5,7 +5,7 @@ export default function WarrantyHero() {
   return (
     <section className="w-full bg-[#f3fff8]">
       {/* ===== Testimonial Box (Top Section) ===== */}
-<div className="max-w-[900px] mx-auto px-6 relative z-20 mb-[-6rem] md:mb-[-8rem]">
+      <div className="max-w-[900px] mx-auto px-6 relative z-20 mb-[-6rem] md:mb-[-8rem]">
 
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 text-center border border-[#e8f8ee]">
           <p className="text-yellow-400 text-lg md:text-xl mb-2">⭐⭐⭐⭐⭐</p>

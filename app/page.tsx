@@ -7,18 +7,43 @@ import HowItWorks from "@/components/HowItWorks";
 import WarrantyPlans from "@/components/WarrantyPlans";
 import WarrantyHero from "@/components/WarrantyHero";
 import WarrantySavingsSection from "@/components/WarrantySavingsSection";
+import Footer from "@/components/Footer";
+import GoodCompanySection from "@/components/GoodCompanySection";
+import HugeSavingsSection from "@/components/HugeSavings";
+import Faqs from "@/components/Faqs";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FinancingSection from "@/components/FinancingSection";
+import SupportTestimonials from "@/components/SupportTestimonials";
+import CoverageCallSection from "@/components/CoverageCallSection";
+import SmartSavingsSection from "@/components/SmartSavingsSection";
+import { getBaseUrl } from "@/lib/getBaseUrl";
 
+export async function generateMetadata(){
+  const baseUrl = getBaseUrl();
+
+  return{
+    title: "Outdoor Warranty | RV Protection Plans",
+    description: "Extended protection plans for RVs and outdoor vehicles.",
+    alternates: {
+      canonical: `${baseUrl}/`,
+    },
+  }
+}
 
 export default function HomePage() {
   return (
     <>
       {/* Fixed Header Section */}
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full z-50">
+      <div className="w-full relative">
+        {/* Wrapper to control mobile/desktop order */}
+        <div className="w-full absolute top-0 lef-0 z-50 flex flex-col md:flex-col-reverse">
+
+          {/* Header FIRST on mobile, SECOND on desktop */}
+          <Header />
+
+          {/* Top Bar SECOND on mobile, FIRST on desktop */}
           <TopBar />
-          <div className="mb-4 md:mb-6 lg:mb-8">
-            <Header />
-          </div>
+
         </div>
 
         {/* Hero Section */}
@@ -51,6 +76,42 @@ export default function HomePage() {
 
       <section className="bg-white">
         <WarrantySavingsSection />
+      </section>
+
+      <section className="bg-white">
+        <SmartSavingsSection />
+      </section>
+
+      <section className="bg-white">
+        <SupportTestimonials />
+      </section>
+
+      <section className="bg-white">
+        <FinancingSection />
+      </section>
+
+      <section className="bg-white">
+        <TestimonialsSection />
+      </section>
+
+      <section className="bg-white">
+        <Faqs />
+      </section>
+
+      <section className="bg-white">
+        <HugeSavingsSection />
+      </section>
+
+      <section className="bg-white">
+        <GoodCompanySection />
+      </section>
+
+      <section className="bg-white">
+        <CoverageCallSection />
+      </section>
+
+      <section className="bg-white">
+        <Footer />
       </section>
     </>
   );
