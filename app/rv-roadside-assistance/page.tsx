@@ -3,6 +3,21 @@ import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import RvRoadsideAssistanceHero from "./components/RvRoadsideAssistanceHero";
 import RvRoadsideAssistanceForm from "./components/RvRoadsideAssistanceForm";
+import RvRoadsideAssistanceContent from "./components/RvRoadsideAssistanceContent";
+import { getBaseUrl } from "@/lib/getBaseUrl";
+import { title } from "process";
+
+export async function generateMetadata(){
+    const baseUrl = getBaseUrl();
+
+    return{
+        title: "rv-roadside-assistance | Outdoor Warranty",
+        alternates:{
+            canonical: `${baseUrl}/rv-roadside-assistance`,
+        },
+    };
+}
+
 
 export default function RvRoadsideAssistancePage() {
     return (
@@ -16,6 +31,10 @@ export default function RvRoadsideAssistancePage() {
 
             <section className="bg-white">
                 <RvRoadsideAssistanceHero/>
+            </section>
+
+            <section className="bg-white">
+                <RvRoadsideAssistanceContent/>
             </section>
 
             <section className="bg-white">

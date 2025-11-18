@@ -1,90 +1,90 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RvRoadsideAssistanceHero(){
-    return(
-        <>
-        <section className="bg-white flex justify-center items-center">
-      <div className="container max-w-[1166px] px-4 py-12">
-        <div className="rounded-2xl shadow-lg overflow-hidden">
-         
-          {/* layout: content (left) | image (right) on lg */}
-          <div className="flex flex-col lg:flex-row items-center">
-           
-            {/* CONTENT (LEFT) */}
-            <div className="w-full lg:w-1/2 p-6 md:p-10 flex justify-center items-center order-2 lg:order-1">
-              <div className="w-full max-w-xl">
-                <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-extrabold mb-2 text-[#064517] leading-tight">
-                  24/7 RV Roadside Assistance
-                </h1>
+export default function RvRoadsideAssistanceHero() {
+  return (
+    <>
+      <section className="bg-white flex justify-center items-center">
+        <div className="container max-w-[1166px] px-4 py-12">
+          <div className="rounded-2xl shadow-lg overflow-hidden">
 
-                <p className="text-[15px] sm:text-[16px] text-[#334E68] font-medium mb-6">
-                  Your safety net on the open road. Get help anywhere, anytime in the US &amp; Canada.
-                </p>
+            {/* layout: content (left) | image (right) on lg */}
+            <div className="flex flex-col lg:flex-row items-center">
 
-                {/* GRID OF BENEFITS (2 columns) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <Benefit
-                    icon={TowingIcon}
-                    title="Unlimited Towing"
-                    desc="to the nearest qualified repair facility."
-                  />
-                  <Benefit
-                    icon={PlusIcon}
-                    title="Flat Tire Service"
-                    desc="to install your spare when you need it most."
-                  />
-                  <Benefit
-                    icon={TruckIcon}
-                    title="Battery Jump-Start"
-                    desc="to get you back on the road quickly."
-                  />
-                  <Benefit
-                    icon={BoxIcon}
-                    title="Emergency Fuel Delivery"
-                    desc="to get you to the next service station."
-                  />
-                  <Benefit
-                    icon={LockIcon}
-                    title="Lockout & Key Service"
-                    desc="if you're locked out of your RV."
-                  />
-                  <Benefit
-                    icon={MechanicIcon}
-                    title="Mobile Mechanic"
-                    desc="dispatch for minor on-site repairs."
-                  />
-                </div>
+              {/* CONTENT (LEFT) */}
+              <div className="w-full lg:w-1/2 p-6 md:p-10 flex justify-center items-center order-2 lg:order-1">
+                <div className="w-full max-w-xl">
+                  <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-extrabold mb-2 text-[#064517] leading-tight">
+                    24/7 RV Roadside Assistance
+                  </h1>
 
-                <div className="mt-4">
-                  <Link
-                    href="#"
-                    className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition text-[16px] sm:text-[17px]"
-                  >
-                    Get My Personalized Quote
-                  </Link>
+                  <p className="text-[15px] sm:text-[16px] text-[#334E68] font-medium mb-6">
+                    Your safety net on the open road. Get help anywhere, anytime in the US &amp; Canada.
+                  </p>
+
+                  {/* GRID OF BENEFITS (2 columns) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <Benefit
+                      icon={TowingIcon}
+                      title="Unlimited Towing"
+                      desc="to the nearest qualified repair facility."
+                    />
+                    <Benefit
+                      icon={PlusIcon}
+                      title="Flat Tire Service"
+                      desc="to install your spare when you need it most."
+                    />
+                    <Benefit
+                      icon={TruckIcon}
+                      title="Battery Jump-Start"
+                      desc="to get you back on the road quickly."
+                    />
+                    <Benefit
+                      icon={BoxIcon}
+                      title="Emergency Fuel Delivery"
+                      desc="to get you to the next service station."
+                    />
+                    <Benefit
+                      icon={LockIcon}
+                      title="Lockout & Key Service"
+                      desc="if you're locked out of your RV."
+                    />
+                    <Benefit
+                      icon={MechanicIcon}
+                      title="Mobile Mechanic"
+                      desc="dispatch for minor on-site repairs."
+                    />
+                  </div>
+
+                  <div className="mt-4">
+                    <Link
+                      href="#"
+                      className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition text-[16px] sm:text-[17px]"
+                    >
+                      Get My Personalized Quote
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* IMAGE (RIGHT) */}
-            <div className="w-full lg:w-1/2 order-1 lg:order-2">
-              <div className="relative w-full h-[300px] sm:h-[420px] md:h-[615px]">
-                <Image
-                  src="/RV_Roadside Assistance_img/RV-Roadside-Assistance.jpeg"
-                  alt="RV Roadside Assistance"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-bottom-left"
-                />
+              {/* IMAGE (RIGHT) */}
+              <div className="w-full lg:w-1/2 order-1 lg:order-2">
+                <div className="relative w-full h-[300px] sm:h-[420px] md:h-[615px]">
+                  <Image
+                    src="/RV_Roadside Assistance_img/RV-Roadside-Assistance.jpeg"
+                    alt="RV Roadside Assistance"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-bottom-left"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-        </>
-    )
+      </section>
+    </>
+  )
 }
 
 /* -------------------------

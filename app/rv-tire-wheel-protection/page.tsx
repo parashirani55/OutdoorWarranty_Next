@@ -1,23 +1,23 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
-import TrailerAndFifthWheelHero from "./components/TrailerAndFifthWheelHero";
-import TrailerAndFifthWheelForm from "./components/TrailerAndFifthWheelForm";
-import TrailerAndFifthWheelContent from "./components/TrailerAndFifthWheelContent";
+import RvTireWheelProtectionHero from "./components/RvTireWheelProtectionHero";
+import RvTireWheelProtectionContent from "./components/RvTireWheelProtectionContent";
+import RvTireWheelProtectionForm from "./components/RvTireWheelProtectionForm";
 import { getBaseUrl } from "@/lib/getBaseUrl";
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
 
     return{
-        title: "trailer_fifth_wheel | Outerdoor Warranty",
-        alternates:{
-            canonical: `${baseUrl}/trailer_fifth_wheel`,
-        },
+        title: "rv-tire-wheel-protection | Outdoor Warranty",
+        alternates: {
+            canonical: `${baseUrl}/rv-tire-wheel-protection`
+        }
     }
 }
 
-export default function TrailerFifthwheelPage() {
+export default function RvTireWheelProtection() {
     return (
         <>
             <div className="w-full relative">
@@ -28,16 +28,15 @@ export default function TrailerFifthwheelPage() {
             </div>
 
             <section className="bg-white">
-                <TrailerAndFifthWheelHero/>
+                <RvTireWheelProtectionHero/>
             </section>
 
             <section className="bg-white">
-                <TrailerAndFifthWheelContent/>
+                <RvTireWheelProtectionContent/>
             </section>
         
-
             <section className="bg-white">
-                <TrailerAndFifthWheelForm/>
+                <RvTireWheelProtectionForm/>
             </section>
 
             {/* FOOTER */}
