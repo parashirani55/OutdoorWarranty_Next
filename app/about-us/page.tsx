@@ -21,26 +21,11 @@ export async function generateMetadata() {
 export default function AboutPage() {
   return (
     <>
-      {/* FIXED HEADER & BACKGROUND SECTION */}
+      {/* Fixed Header Section */}
       <div className="w-full relative">
-
-        {/* Background Image (Lazy Loaded + Blur Placeholder) */}
-        <div className="absolute inset-0 w-full h-full -z-10">
-          <Image
-            src="/assets/rv-with-awning-pulled-up.png"
-            alt="RV with Awning"
-            fill
-            priority={false}   // lazy load
-            loading="lazy"
-            className="object-cover object-center"
-          />
-        </div>
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40 -z-0"></div>
-
-        {/* Header + TopBar On Top */}
-        <div className="relative z-10 flex flex-col md:flex-col-reverse">
+        <div className="w-full z-50 flex flex-col md:flex-col-reverse
+                     bg-center bg-cover before:absolute before:inset-0 before:bg-black/30 before:z-0"
+          style={{ backgroundImage: "url('/assets/rv-with-awning-pulled-up.png')" }}>
           <Header />
           <TopBar />
         </div>

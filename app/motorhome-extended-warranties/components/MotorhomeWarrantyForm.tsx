@@ -19,7 +19,7 @@ export default function MotorhomeWarrantyForm() {
   };
 
   return (
-    <div className="max-w-[749px] mx-auto shadow-2xl p-6 sm:p-8 rounded-2xl bg-white mb-20 mt-10 w-[95%] sm:w-[90%] md:w-auto">
+    <div id="motorhome-form" className="max-w-[749px] mx-auto shadow-2xl p-6 sm:p-8 rounded-2xl bg-white mb-20 mt-10 w-[95%] sm:w-[90%] md:w-auto">
       
       {/* Top Title */}
       <p className="text-[14px] sm:text-[16px] font-semibold mb-2 text-center italic leading-snug">

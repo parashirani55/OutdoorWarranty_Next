@@ -51,14 +51,21 @@ export default function MotorhomeWarranty() {
                 </div>
 
                 {/* CTA */}
-                <div className="mt-4">
-                  <Link
-                    href="#"
-                    className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition text-[16px] sm:text-[17px]"
-                  >
-                    Get My Personalized Quote
-                  </Link>
-                </div>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById("motorhome-form");
+                    if (el) {
+                      const offset = -150; // adjust if needed
+                      const y = el.getBoundingClientRect().top + window.scrollY + offset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
+                  className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition"
+                >
+                  Get My Personalized Quote
+                </button>
+
+
 
               </div>
             </div>

@@ -25,6 +25,11 @@ body {
   color: var(--foreground);
 } */
 
-html {
+html{
   font-family: var(--font-poppins), sans-serif;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
