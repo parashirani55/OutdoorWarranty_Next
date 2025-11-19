@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { Poppins, Kalam } from "next/font/google";
+import { Poppins } from "next/font/google";
 import PageLoader from "@/components/PageLoader";
 import LenisProvider from "@/components/LenisProvider";
 
@@ -10,12 +10,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
-});
-
-const kalam = Kalam({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
+  preload: false, // prevents Google Fonts build error
 });
 
 export const metadata: Metadata = {
@@ -40,7 +35,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
 
-      <body cz-shortcut-listen="true" className="text-gray-900 bg-white min-h-screen antialiased overflow-x-hidden">
+      <body className="text-gray-900 bg-white min-h-screen antialiased overflow-x-hidden">
         <PageLoader />
         <LenisProvider>{children}</LenisProvider>
       </body>

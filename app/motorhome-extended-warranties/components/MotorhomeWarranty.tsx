@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import LenisProvider from "@/components/LenisProvider";
 
 export default function MotorhomeWarranty() {
 
@@ -81,20 +81,26 @@ export default function MotorhomeWarranty() {
                   <Feature icon={HvacIcon} title="Coach A/C & Heat" />
                 </div>
 
-                {/* CTA */}
                 <button
                   onClick={() => {
-                    const el = document.getElementById("warranty-form");
-                    if (el) {
-                      const offset = -150; // adjust if needed
-                      const y = el.getBoundingClientRect().top + window.scrollY + offset;
-                      window.scrollTo({ top: y, behavior: "smooth" });
-                    }
+                    const form = document.getElementById("warranty-form");
+                    if (!form) return;
+
+                    const header = document.querySelector("header");
+                    const headerHeight = header ? header.offsetHeight : 0;
+
+                    const targetY = form.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+                    window.scrollTo({
+                      top: targetY,
+                      behavior: "smooth",
+                    });
                   }}
                   className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition mt-4 cursor-pointer"
                 >
                   Get My Personalized Quote
                 </button>
+
               </div>
             </div>
 
