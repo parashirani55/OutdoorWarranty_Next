@@ -11,20 +11,20 @@ export default function Footer() {
       <footer className="bg-[#022d0e] text-white">
         {/* ===== Top Section ===== */}
         <div className="max-w-[1400px] mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          
+
           {/* Column 1 */}
           <div>
             <h5 className="text-[20px] mb-4 tracking-wide">ABOUT US</h5>
-            <p className="text-[14px] text-[#cccccc] leading-relaxed">
-              OutdoorWarranty provides high-value RV warranty plans designed to
-              outperform dealership coverage while saving customers money.
+            <p className="text-[14px] text-[#cccccc] leading-relaxed pe-[5.5rem]">
+              Outdoorwarranty.com is a top provider of warranties for RVs — also known as RV extended service contracts — and they’ve developed their product line after witnessing firsthand the markup that dealerships were getting for providing warranties that weren’t as comprehensive as what we provide.
             </p>
           </div>
 
           {/* Column 2 */}
           <div>
             <h5 className="text-[20px] mb-4 tracking-wide">LINKS</h5>
-            <ul className="space-y-2 text-[15px] text-gray-200">
+            <ul className="text-gray-200">
+              <li><a href="/blog" className="hover:text-[#28cc1b]">Blog</a></li>
               <li><a href="/frequently-asked-questions" className="hover:text-[#28cc1b]">FAQ</a></li>
               <li><a href="/privacy-policy" className="hover:text-[#28cc1b]">Privacy Policy</a></li>
               <li><a href="/refund-policy" className="hover:text-[#28cc1b]">Refund Policy</a></li>
@@ -40,7 +40,7 @@ export default function Footer() {
 
               <li>
                 <a href="tel:574-505-6246" className="flex items-center gap-2 hover:text-[#28cc1b]">
-                  <i className="bi bi-telephone-fill"></i> 574-505-6246
+                  <i className="bi bi-telephone-fill"></i> 269-431-6864
                 </a>
               </li>
 
@@ -54,11 +54,11 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => setIsMapOpen(true)}
-                  className="flex items-start gap-2 hover:text-[#28cc1b] text-left"
+                  className="flex items-start gap-2 hover:text-[#28cc1b] text-left cursor-pointer"
                 >
                   <i className="bi bi-geo-alt-fill"></i>
                   <span>
-                    223 South Main St. Suite 21  
+                    223 South Main St. Suite 21
                     <span className="block">Elkhart, IN 46514</span>
                   </span>
                 </button>
@@ -82,12 +82,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
+        {/* ===== Bottom Section ===== */}
         <div className="bg-white text-[#09360c]">
-          <div className="max-w-[1400px] mx-auto px-6 py-6">
-            <p className="text-[13px] italic">
-              OutdoorWarranty is a wholesale broker of RV service contracts.  
-              <a href="/terms" className="text-[#28cc1b] font-medium hover:underline"> Read full Terms › </a>
+          <div className="max-w-[1400px] mx-auto px-6 py-6 text-center sm:text-left">
+            <p className="italic text-[13px] leading-relaxed"> Disclosure: Outdoor Warranty is a wholesale broker of RV service
+              contracts. Website content is for informational purposes only. In case of any discrepancy,
+              the written contract governs.{" "} <a href="https://outdoorwarranty.com/terms/" rel="noopener noreferrer" target="_blank"
+                className="text-[#28cc1b] hover:underline font-medium" > Read full Terms & Disclosures › </a>
             </p>
           </div>
         </div>
