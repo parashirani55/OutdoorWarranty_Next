@@ -3,12 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-export default function TrailerAndFifthWheelHero(){
-    return(
+export default function TrailerAndFifthWheelHero() {
+  return (
     <section className="bg-white flex justify-center items-center">
       <div className="container max-w-[1166px] px-4 py-12">
         <div className="rounded-2xl shadow-lg overflow-hidden">
-          
+
           <div className="flex flex-col lg:flex-row items-center">
 
             {/* IMAGE */}
@@ -51,14 +51,20 @@ export default function TrailerAndFifthWheelHero(){
                 </div>
 
                 {/* CTA */}
-                <div className="mt-4">
-                  <Link
-                    href="#"
-                    className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition text-[16px] sm:text-[17px]"
-                  >
-                    Get My Personalized Quote
-                  </Link>
-                </div>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById("warranty-form");
+                    if (el) {
+                      const offset = -150; // adjust if needed
+                      const y = el.getBoundingClientRect().top + window.scrollY + offset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
+                  className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition cursor-pointer"
+                >
+                  Get My Personalized Quote
+                </button>
+
 
               </div>
             </div>
@@ -67,7 +73,7 @@ export default function TrailerAndFifthWheelHero(){
         </div>
       </div>
     </section>
-    )
+  )
 }
 
 /* -------------------------

@@ -22,7 +22,7 @@ export default function TopBar() {
   }, []);
 
   return (
-    <div className={`w-full text-white text-sm 
+    <div className={`w-full text-white text-sm  z-50
     ${pathname === "/"? "bg-black/45" : "bg-black/80" }`}>
       <div className=" max-w-[1400px] mx-auto  text-[12px] flex flex-col lg:flex-row  justify-between items-center  py-3 px-4 gap-3 lg:gap-0  ">
 

@@ -4,6 +4,37 @@ import Link from "next/link";
 import React from "react";
 
 export default function MotorhomeWarranty() {
+
+  // inside your client component file (Hero / MotorhomeWarranty)
+  function scrollToMotorhomeForm() {
+    const tryScroll = (attempt = 0) => {
+      const el = document.getElementById("motorhome-form");
+      if (!el) {
+        // retry up to 10 times (about 1 second total)
+        if (attempt < 10) {
+          setTimeout(() => tryScroll(attempt + 1), 100);
+        }
+        return;
+      }
+
+      // compute offset for sticky/fixed header if present
+      const header = document.querySelector("header");
+      const headerHeight = header ? (header as HTMLElement).offsetHeight : 0;
+
+      // extra buffer (optional)
+      const extra = 16;
+
+      const targetY = el.getBoundingClientRect().top + window.scrollY - headerHeight - extra;
+
+      // clamp to >= 0
+      const top = Math.max(0, Math.round(targetY));
+
+      window.scrollTo({ top, behavior: "smooth" });
+    };
+
+    tryScroll();
+  }
+
   return (
     <section className="bg-white flex justify-center items-center">
       <div className="container max-w-[1166px] px-4 py-12">
@@ -53,20 +84,17 @@ export default function MotorhomeWarranty() {
                 {/* CTA */}
                 <button
                   onClick={() => {
-                    const el = document.getElementById("motorhome-form");
+                    const el = document.getElementById("warranty-form");
                     if (el) {
                       const offset = -150; // adjust if needed
                       const y = el.getBoundingClientRect().top + window.scrollY + offset;
                       window.scrollTo({ top: y, behavior: "smooth" });
                     }
                   }}
-                  className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition"
+                  className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition mt-4 cursor-pointer"
                 >
                   Get My Personalized Quote
                 </button>
-
-
-
               </div>
             </div>
 

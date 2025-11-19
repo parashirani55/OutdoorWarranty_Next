@@ -29,7 +29,7 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-6 py-4">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center z-50">
           <Image
             src="/assets/outdoowarranty-logo.svg"
             alt="Outdoor Warranty Logo"

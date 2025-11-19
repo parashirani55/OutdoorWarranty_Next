@@ -58,7 +58,7 @@ export default function RvRoadsideAssistanceHero() {
 
                   <div className="mt-4">
                     <Link
-                      href="#"
+                      href="#warranty-form"
                       className="inline-block bg-[#064517] hover:bg-[#034b16] text-white font-semibold px-7 sm:px-9 py-3 sm:py-4 rounded-lg transition text-[16px] sm:text-[17px]"
                     >
                       Get My Personalized Quote
