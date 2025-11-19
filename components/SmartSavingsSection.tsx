@@ -1,75 +1,109 @@
 "use client";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function SmartSavingsSection() {
   const [showPopup, setShowPopup] = useState(false);
+
+   // Disable page scroll when popup is open
+    useEffect(() => {
+      if (showPopup) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    }, [showPopup]);
+  
+    // Close popup on ESC key
+    useEffect(() => {
+      const handleEsc = (e: KeyboardEvent) => {
+        if (e.key === "Escape") setShowPopup(false);
+      };
+      window.addEventListener("keydown", handleEsc);
+      return () => window.removeEventListener("keydown", handleEsc);
+    }, []);
 
   return (
     <>
       {/* ======================= POPUP (added) ======================= */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/50 z-[9999] flex justify-center items-center p-4">
-          <div className="bg-white w-full max-w-[640px] p-10 py-10 rounded-2xl shadow-2xl relative">
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex justify-center items-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowPopup(false);
+          }}
+        >
+          <div className="bg-white w-full max-w-[540px] sm:max-w-[600px] md:max-w-[650px] rounded-2xl shadow-2xl p-6 sm:p-10 relative max-h-[90vh] overflow-y-auto">
 
             {/* Close Button */}
             <button
-              className="absolute top-3 right-4 text-lg text-[#3eb000] cursor-pointer"
+              className="absolute top-4 right-4 text-2xl text-[#3eb000] hover:text-[#2e8a00] transition"
               onClick={() => setShowPopup(false)}
             >
               ✖
             </button>
 
-            <h2 className="text-[26px] lg:text-[31px] font-[700] text-center mb-2 text-[#09360c]">
-              Hurry: Discover <span className="text-[#3eb000]">Unbeatable Savings</span> on RV Extended Warranties!
+            <h2 className="text-[22px] sm:text-[28px] lg:text-[30px] font-[700] text-center mb-3 text-[#09360c] leading-snug">
+              Hurry: Discover{" "}
+              <span className="text-[#3eb000]">Unbeatable Savings</span> on RV Extended Warranties!
             </h2>
 
-            <p className="text-center text-[16px] font-semibold mb-4 text-[#09360c]">
+            <p className="text-center text-[14px] sm:text-[16px] font-semibold mb-5 text-[#09360c]">
               Just a few clicks away from exceptional coverage! 👇
             </p>
 
             {/* Popup Form */}
-            <form className="space-y-3">
+            <form className="space-y-4 sm:space-y-5">
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-4 py-3 text-[14px] sm:text-[15px]"
               />
+
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-4 py-3 text-[14px] sm:text-[15px]"
               />
+
               <input
                 type="tel"
                 placeholder="Mobile Phone Number"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
-              />
-              <input
-                type="number"
-                placeholder="Zip Code"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-4 py-3 text-[14px] sm:text-[15px]"
               />
 
-              <p className="text-[11px] text-gray-700 leading-snug mt-2">
-                You agree to receive automated follow-up and promotional messages.
-                Msg & data rates may apply. See{" "}
-                <a href="https://outdoorwarranty.com/terms/" className="text-green-600">Terms of Service</a>{" "}
+              <input
+                type="text"
+                placeholder="Zip Code"
+                className="w-full border border-gray-300 rounded-md px-4 py-3 text-[14px] sm:text-[15px]"
+              />
+
+              <p className="text-[11px] sm:text-[12px] text-gray-700 leading-snug">
+                By submitting, you agree to receive automated follow-up messages. Msg & data rates
+                may apply. See{" "}
+                <a href="https://outdoorwarranty.com/terms/" className="text-green-600 underline">
+                  Terms of Service
+                </a>{" "}
                 &{" "}
-                <a href="https://outdoorwarranty.com/privacy-policy/" className="text-green-600">Privacy Policy</a>.
+                <a href="https://outdoorwarranty.com/privacy-policy/" className="text-green-600 underline">
+                  Privacy Policy
+                </a>.
               </p>
 
-              <button  type="submit" className="w-full bg-[#48ac3f] text-white py-3 rounded-full font-medium text-[18px] cursor-pointer">
+              <button
+                type="submit"
+                className="w-full bg-[#48ac3f] hover:bg-[#3fa039] text-white py-3 rounded-full text-[15px] sm:text-[17px] font-semibold transition"
+              >
                 Claim Your Savings Now! 👉
               </button>
             </form>
 
-            <p className="text-center text-[13px] mt-4">
-              Just takes a few minutes to get started! 👍
+            <p className="text-center text-[12px] sm:text-[13px] mt-4 text-[#09360c]">
+              Takes just a few minutes to get started! 👍
             </p>
 
-            <p className="text-left text-[11px] mt-5 text-[#09360c]">
-              *Privacy is important to us. We never sell or distribute your email to any third party services at any time as stated in our Privacy Policy page. 
+            <p className="text-left text-[10px] sm:text-[11px] mt-4 text-[#09360c] leading-relaxed">
+              *We respect your privacy. We never sell or share your email.
             </p>
           </div>
         </div>
