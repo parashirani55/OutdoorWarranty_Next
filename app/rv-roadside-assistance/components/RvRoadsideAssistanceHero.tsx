@@ -69,7 +69,7 @@ export default function RvRoadsideAssistanceHero() {
 
               {/* IMAGE (RIGHT) */}
               <div className="w-full lg:w-1/2 order-1 lg:order-2">
-                <div className="relative w-full h-[300px] sm:h-[420px] md:h-[615px]">
+                <div className="relative w-full h-[300px] sm:h-[420px] md:h-[615px] lg:h-[650px]">
                   <Image
                     src="/RV_Roadside Assistance_img/RV-Roadside-Assistance.jpeg"
                     alt="RV Roadside Assistance"

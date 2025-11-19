@@ -72,7 +72,7 @@ export default function GoodCompanySection() {
                     </a>
 
                     {/* Decorative Icon */}
-                    <div className="hidden md:flex justify-end mt-8">
+                    <div className="hidden lg:flex justify-end mt-8">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="80"

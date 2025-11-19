@@ -85,10 +85,10 @@ export default function HugeSavingsSection() {
           
           <div className="absolute inset-0 bg-gradient-to-r from-white/100 via-white/90 to-white/60"></div>
 
-          <div className="relative z-[2] flex flex-col md:flex-row items-center justify-between w-full gap-10">
+          <div className="relative z-[2] flex flex-col lg:flex-row items-center justify-between w-full gap-10">
             
             {/* LEFT IMAGE */}
-            <div className="flex justify-center w-full md:w-1/2 mb-10 md:mb-0">
+            <div className="flex justify-center w-full lg:w-1/2 mb-10 md:mb-0">
               <img
                 src="/section_img/huge-savings-guarantee-65fe2e3c98c92.webp"
                 alt="Huge Savings Badge"
@@ -97,7 +97,7 @@ export default function HugeSavingsSection() {
             </div>
 
             {/* RIGHT TEXT */}
-            <div className="w-full md:w-1/2 text-[#09360c] space-y-5 text-center md:text-left">
+            <div className="w-full lg:w-1/2 text-[#09360c] space-y-5 text-center md:text-left">
               <h2 className="text-[26px] sm:text-[32px] md:text-[38px] lg:text-[40px] font-semibold text-[#064517] leading-snug">
                 Our Huge Savings{""}
                 <span className="block">Guarantee</span>

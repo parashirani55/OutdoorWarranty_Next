@@ -13,7 +13,7 @@ export default function TrailerAndFifthWheelHero() {
 
             {/* IMAGE */}
             <div className="w-full lg:w-1/2">
-              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[615px]">
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[615px] lg:h-[695px]">
                 <Image
                   src="/TrailerFifthwheelPage_img/imgi_3_RV-Trailers.png"
                   alt="Trailers"

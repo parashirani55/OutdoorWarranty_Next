@@ -17,7 +17,7 @@ import SupportTestimonials from "@/components/SupportTestimonials";
 import CoverageCallSection from "@/components/CoverageCallSection";
 import SmartSavingsSection from "@/components/SmartSavingsSection";
 import { getBaseUrl } from "@/lib/getBaseUrl";
-import { url } from "inspector";
+
 
 export async function generateMetadata() {
   const baseUrl = getBaseUrl();

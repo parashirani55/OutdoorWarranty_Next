@@ -4,7 +4,7 @@ import { MapPin, Phone, Star } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function TopBar() {
-  const texts = ["Interest Free Plan", "WHOLESALE PRICING"];
+  const texts = ["INTEREST FREE PLAN", "WHOLESALE PRICING", "24/7 SUPPORT"];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const pathname = usePathname();
