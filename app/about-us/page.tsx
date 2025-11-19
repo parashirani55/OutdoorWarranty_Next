@@ -4,7 +4,7 @@ import TopBar from "@/components/TopBar";
 import AboutContent from "./components/AboutContent";
 import AboutForm from "./components/AboutForm";
 import { getBaseUrl } from "@/lib/getBaseUrl";
-import Image from "next/image";
+
 
 export async function generateMetadata() {
   const baseUrl = getBaseUrl();

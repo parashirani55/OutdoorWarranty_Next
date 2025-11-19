@@ -3,7 +3,7 @@ import "./globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Poppins } from "next/font/google";
 import PageLoader from "@/components/PageLoader";
-import LenisProvider from "@/components/LenisProvider";
+// import LenisProvider from "@/components/LenisProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,7 +37,9 @@ export default function RootLayout({
 
       <body className="text-gray-900 bg-white min-h-screen antialiased overflow-x-hidden">
         <PageLoader />
-        <LenisProvider>{children}</LenisProvider>
+        {/* <LenisProvider> */}
+          {children}
+          {/* </LenisProvider> */}
       </body>
     </html>
   );

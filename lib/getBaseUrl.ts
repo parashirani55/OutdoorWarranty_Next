@@ -3,6 +3,6 @@ export function getBaseUrl() {
     return process.env.NEXT_PUBLIC_SITE_URL;
   }
 
-  return "http://localhost:3000";
+  return "http://outdoorwarranty.com";
 }
     
