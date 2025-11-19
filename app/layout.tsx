@@ -35,7 +35,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
 
-      <body className="text-gray-900 bg-white min-h-screen antialiased overflow-x-hidden">
+      <body cz-shortcut-listen="true" className="text-gray-900 bg-white min-h-screen antialiased overflow-x-hidden">
         <PageLoader />
         {/* <LenisProvider> */}
           {children}

@@ -3,7 +3,7 @@ export default function PrivacyPolicyContent() {
         <section className="max-w-[728px] mx-auto px-4 leading-relaxed text-[#09360c] pt-10">
 
             {/* MAIN TITLE */}
-            <h1 className="text-[40px] my-4 text-[#064517] leading-9">
+            <h1 className="text-[40px] font-medium my-4 text-[#064517] leading-9">
                 Privacy Policy
             </h1>
 
@@ -18,7 +18,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 “Personally Identifiable Information”
             </h3>
 
@@ -36,7 +36,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 What Personally Identifiable Information is collected?
             </h3>
 
@@ -47,7 +47,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 What organizations are collecting the information?
             </h3>
 
@@ -66,7 +66,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 How does the Site use Personally Identifiable Information?
             </h3>
 
@@ -79,7 +79,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 With whom may the information be shared?
             </h3>
 
@@ -92,7 +92,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 How is Personally Identifiable Information stored?
             </h3>
 
@@ -102,7 +102,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 What choices are available regarding the information’s collection, use, and distribution?
             </h3>
 
@@ -115,7 +115,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Cookies
             </h3>
 
@@ -131,7 +131,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Are Cookies Used on the Site?
             </h3>
 
@@ -141,7 +141,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Cookies used by our service providers
             </h3>
 
@@ -150,7 +150,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 How does the Site use login information?
             </h3>
 
@@ -160,7 +160,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 What partners or service providers can access Personally Identifiable Information?
             </h3>
 
@@ -170,7 +170,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 How does the Site keep Personally Identifiable Information secure?
             </h3>
 
@@ -181,7 +181,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 How can Visitors correct inaccuracies?
             </h3>
 
@@ -194,7 +194,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Can a Visitor delete or deactivate Personally Identifiable Information?
             </h3>
 
@@ -203,7 +203,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Your rights
             </h3>
 
@@ -219,7 +219,7 @@ export default function PrivacyPolicyContent() {
             </ul>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Children’s Privacy
             </h3>
 
@@ -229,7 +229,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Compliance With Laws
             </h3>
 
@@ -239,7 +239,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 What happens if the Privacy Policy changes?
             </h3>
 
@@ -249,7 +249,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* SECTION */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Links
             </h3>
 
@@ -259,7 +259,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* CONTACT */}
-            <h3 className="text-[28px] my-4 text-[#064517] leading-9">
+            <h3 className="text-[28px] font-medium my-4 text-[#064517] leading-9">
                 Contact Us
             </h3>
 
@@ -271,7 +271,7 @@ export default function PrivacyPolicyContent() {
             </p>
 
             {/* Divider */}
-            <div className="w-full border-b-4 border-green-600 my-10"></div>
+            <div className="w-full border-b-10 border-green-600 my-10"></div>
 
         </section>
     );

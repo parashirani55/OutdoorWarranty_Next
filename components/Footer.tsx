@@ -1,167 +1,151 @@
 "use client";
+
+import { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function Footer() {
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
   return (
-    <footer className="bg-[#022d0e] text-white">
-      {/* ===== Top Section ===== */}
-      <div className="max-w-[1400px] mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {/* Column 1 - About */}
-        <div>
-          <h5 className="text-[20px] mb-4 tracking-wide">ABOUT US</h5>
-          <p className="text-[14px] leading-relaxed text-[#cccccc] lg:pe-[4.5rem]">
-            Outdoorwarranty.com is a top provider of warranties for RVs — also known as RV extended
-            service contracts — and they’ve developed their product line after witnessing firsthand
-            the markup that dealerships were getting for providing warranties that weren’t as
-            comprehensive as what we provide.
-          </p>
-        </div>
+    <>
+      <footer className="bg-[#022d0e] text-white">
+        {/* ===== Top Section ===== */}
+        <div className="max-w-[1400px] mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          
+          {/* Column 1 */}
+          <div>
+            <h5 className="text-[20px] mb-4 tracking-wide">ABOUT US</h5>
+            <p className="text-[14px] text-[#cccccc] leading-relaxed">
+              OutdoorWarranty provides high-value RV warranty plans designed to
+              outperform dealership coverage while saving customers money.
+            </p>
+          </div>
 
-        {/* Column 2 - Links */}
-        <div>
-          <h5 className="text-[20px] mb-4 tracking-wide">LINKS</h5>
-          <ul className="space-y-2 text-[15px] text-gray-200">
-            <li>
-              <a
-                href="https://outdoorwarranty.com/blog/"
-                className="hover:text-[#28cc1b] transition"
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <a
-                href="/frequently-asked-questions"
-                className="hover:text-[#28cc1b] transition"
-              >
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a
-                href="/privacy-policy"
-                className="hover:text-[#28cc1b] transition"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                href="/refund-policy"
-                className="hover:text-[#28cc1b] transition"
-              >
-                Refund Policy
-              </a>
-            </li>
-            <li>
-              <a
-                href="/terms"
-                className="hover:text-[#28cc1b] transition"
-              >
-                Terms & Conditions
-              </a>
-            </li>
-          </ul>
-        </div>
+          {/* Column 2 */}
+          <div>
+            <h5 className="text-[20px] mb-4 tracking-wide">LINKS</h5>
+            <ul className="space-y-2 text-[15px] text-gray-200">
+              <li><a href="/frequently-asked-questions" className="hover:text-[#28cc1b]">FAQ</a></li>
+              <li><a href="/privacy-policy" className="hover:text-[#28cc1b]">Privacy Policy</a></li>
+              <li><a href="/refund-policy" className="hover:text-[#28cc1b]">Refund Policy</a></li>
+              <li><a href="/terms" className="hover:text-[#28cc1b]">Terms & Conditions</a></li>
+            </ul>
+          </div>
 
-        {/* Column 3 - Contact */}
-        <div>
-          <h5 className="text-[20px] mb-4 tracking-wide">CONTACT</h5>
-          <ul className="space-y-3 text-[14px] text-gray-200">
-            <li>
-              <a
-                href="tel:574-505-6246"
-                className="flex items-center gap-2 hover:text-[#28cc1b] transition"
-              >
-                <i className="bi bi-telephone-fill text-white"></i>
-                <span>574-505-6246</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://outdoorwarranty.com/contact/"
-                className="flex items-center gap-2 hover:text-[#28cc1b] transition"
-              >
-                <i className="bi bi-envelope-fill text-white"></i>
-                <span>Email Us</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE0MzkiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
-                className="flex items-start gap-2 hover:text-[#28cc1b] transition"
-              >
-                <i className="bi bi-geo-alt-fill text-white"></i>
-                <span>223 South Main St. Suite 21 Elkhart, IN 46514</span>
-              </a>
-            </li>
-          </ul>
+          {/* Column 3 — CONTACT */}
+          <div>
+            <h5 className="text-[20px] mb-4 tracking-wide">CONTACT</h5>
 
-          {/* Social Icons */}
-          <div
-            className="flex items-center gap-3 mt-6 flex-wrap sm:flex-nowrap"
-            role="list"
-          >
-            {/* Facebook */}
-            <span role="listitem">
-              <a
-                href="https://www.facebook.com/OutdoorWarranty"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="flex items-center justify-center w-8 h-8 rounded-sm bg-[#3b5998] hover:opacity-80 transition"
-              >
-                <i className="bi bi-facebook text-white text-[16px]"></i>
-              </a>
-            </span>
+            <ul className="space-y-3 text-[14px] text-gray-200">
 
-            {/* Twitter */}
-            <span role="listitem">
-              <a
-                href="https://twitter.com/OutdoorWarranty"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="flex items-center justify-center w-8 h-8 rounded-sm bg-[#1DA1F2] hover:opacity-80 transition"
-              >
-                <i className="bi bi-twitter text-white text-[16px]"></i>
-              </a>
-            </span>
+              <li>
+                <a href="tel:574-505-6246" className="flex items-center gap-2 hover:text-[#28cc1b]">
+                  <i className="bi bi-telephone-fill"></i> 574-505-6246
+                </a>
+              </li>
 
-            {/* LinkedIn */}
-            <span role="listitem">
-              <a
-                href="https://www.linkedin.com/company/outdoorwarranty-com/about/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="flex items-center justify-center w-8 h-8 rounded-sm bg-[#0077B5] hover:opacity-80 transition"
-              >
-                <i className="bi bi-linkedin text-white text-[16px]"></i>
+              <li>
+                <a href="/contact" className="flex items-center gap-2 hover:text-[#28cc1b]">
+                  <i className="bi bi-envelope-fill"></i> Email Us
+                </a>
+              </li>
+
+              {/* ADDRESS → opens popup */}
+              <li>
+                <button
+                  onClick={() => setIsMapOpen(true)}
+                  className="flex items-start gap-2 hover:text-[#28cc1b] text-left"
+                >
+                  <i className="bi bi-geo-alt-fill"></i>
+                  <span>
+                    223 South Main St. Suite 21  
+                    <span className="block">Elkhart, IN 46514</span>
+                  </span>
+                </button>
+              </li>
+
+            </ul>
+
+            {/* Social icons */}
+            <div className="flex gap-3 mt-6">
+              <a href="https://facebook.com/OutdoorWarranty" target="_blank" className="w-8 h-8 bg-[#3b5998] flex items-center justify-center rounded-sm">
+                <i className="bi bi-facebook"></i>
               </a>
-            </span>
+              <a href="https://twitter.com/OutdoorWarranty" target="_blank" className="w-8 h-8 bg-[#1DA1F2] flex items-center justify-center rounded-sm">
+                <i className="bi bi-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/outdoorwarranty-com/about/" target="_blank" className="w-8 h-8 bg-[#0077B5] flex items-center justify-center rounded-sm">
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </div>
+
           </div>
         </div>
-      </div>
 
-      {/* ===== Bottom Section ===== */}
-      <div className="bg-white text-[#09360c]">
-        <div className="max-w-[1400px] mx-auto px-6 py-6 text-center sm:text-left">
-          <p className="italic text-[13px] leading-relaxed">
-            Disclosure: Outdoor Warranty is a wholesale broker of RV service contracts. Website
-            content is for informational purposes only. In case of any discrepancy, the written
-            contract governs.{" "}
-            <a
-              href="https://outdoorwarranty.com/terms/"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-[#28cc1b] hover:underline font-medium"
-            >
-              Read full Terms & Disclosures ›
-            </a>
-          </p>
+        {/* Bottom */}
+        <div className="bg-white text-[#09360c]">
+          <div className="max-w-[1400px] mx-auto px-6 py-6">
+            <p className="text-[13px] italic">
+              OutdoorWarranty is a wholesale broker of RV service contracts.  
+              <a href="/terms" className="text-[#28cc1b] font-medium hover:underline"> Read full Terms › </a>
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+      {/* ================================================= */}
+      {/*                ELEMENTOR STYLE POPUP              */}
+      {/* ================================================= */}
+
+      {isMapOpen && (
+        <div
+          className="
+            fixed inset-0 bg-black/70 flex justify-center items-center 
+            z-[9999] px-4 cursor-pointer
+          "
+        >
+          <div
+            className="
+              bg-white rounded-lg shadow-xl relative 
+              w-full max-w-[700px] overflow-hidden
+              animate-[fadeIn_.35s_ease]
+            "
+          >
+
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMapOpen(false)}
+              className="
+                absolute top-3 right-3
+                text-[#064517] hover:text-[#28cc1b] 
+                text-2xl z-[999] cursor-pointer
+              "
+            >
+              <i className="bi bi-x-lg !font-bold"></i>
+            </button>
+
+            {/* Popup Content (matches Elementor) */}
+            <div className="text-center py-6 px-6">
+
+              <h2 className="text-[24px] font-semibold text-[#022d0e]">
+                OutdoorWarranty
+              </h2>
+
+              <p className="text-[16px] mt-1 mb-4 text-gray-700">
+                223 South Main St. Suite 21 Elkhart, IN 46514
+              </p>
+
+              {/* Google Map */}
+              <iframe
+                className="w-full h-[350px] rounded-lg"
+                loading="lazy"
+                src="https://maps.google.com/maps?q=223%20South%20Main%20St%20Suite%2021%20Elkhart%20IN%2046514&t=m&z=12&output=embed&iwloc=near"
+              ></iframe>
+
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

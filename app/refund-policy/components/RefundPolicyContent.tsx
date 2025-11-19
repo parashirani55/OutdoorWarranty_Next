@@ -4,7 +4,7 @@ export default function RefundPolicyContent(){
         <section className="max-w-[728px] mx-auto px-4 leading-relaxed text-[#09360c] pt-10">
 
             {/* MAIN TITLE */}
-            <h1 className="text-[40px] my-4 text-[#064517] leading-9">
+            <h1 className="text-[40px] font-medium my-4 text-[#064517] leading-9">
                 Refund Policy
             </h1>
 
@@ -18,7 +18,7 @@ export default function RefundPolicyContent(){
             </p>
 
             {/* Divider */}
-            <div className="w-full border-b-4 border-green-600 my-10"></div>
+            <div className="w-full border-b-10 border-green-600 my-10"></div>
 
         </section>
         

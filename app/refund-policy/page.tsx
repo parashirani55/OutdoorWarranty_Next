@@ -9,8 +9,8 @@ export async function generateMetadata(){
     const baseUrl = getBaseUrl();
 
     return{
-        title: "outdoorWarranty.com/refund-policy/",
-        // description:"Protect your RV from costly tire and wheel damage caused by road hazards. Includes repair, replacement, rim coverage, mounting, balancing, and 24/7 roadside assistance.",
+        title: "Refund Policy - OutdoorWarranty.com",
+        description:"Details on Outdoor Warranty’s refund process and eligibility.",
         alternates: {
             canonical: `${baseUrl}/refund-policy/`
         }
