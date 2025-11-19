@@ -31,7 +31,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://outdoorwarranty.com/frequently-asked-questions/"
+                href="/frequently-asked-questions"
                 className="hover:text-[#28cc1b] transition"
               >
                 FAQ
@@ -39,7 +39,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://outdoorwarranty.com/privacy-policy/"
+                href="/privacy-policy"
                 className="hover:text-[#28cc1b] transition"
               >
                 Privacy Policy
@@ -47,7 +47,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://outdoorwarranty.com/refund-policy/"
+                href="/refund-policy"
                 className="hover:text-[#28cc1b] transition"
               >
                 Refund Policy
@@ -55,7 +55,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://outdoorwarranty.com/terms/"
+                href="/terms"
                 className="hover:text-[#28cc1b] transition"
               >
                 Terms & Conditions
