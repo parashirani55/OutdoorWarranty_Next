@@ -5,13 +5,13 @@ import RvRoadsideAssistanceHero from "./components/RvRoadsideAssistanceHero";
 import RvRoadsideAssistanceForm from "./components/RvRoadsideAssistanceForm";
 import RvRoadsideAssistanceContent from "./components/RvRoadsideAssistanceContent";
 import { getBaseUrl } from "@/lib/getBaseUrl";
-import { title } from "process";
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
 
     return{
-        title: "rv-roadside-assistance | Outdoor Warranty",
+        title: "outdoorWarranty.com/rv-roadside-assistance",
+        description:"24/7 RV roadside assistance coverage including towing, flat tire service, battery jump-start, emergency fuel delivery, and lockout support across the U.S. and Canada.",
         alternates:{
             canonical: `${baseUrl}/rv-roadside-assistance`,
         },
@@ -22,8 +22,10 @@ export async function generateMetadata(){
 export default function RvRoadsideAssistancePage() {
     return (
         <>
-            <div className="w-full relative">
-                <div className="w-full flex flex-col md:flex-col-reverse">
+            <div className="w-full relative z-50">
+                <div className="w-full flex flex-col md:flex-col-reverse
+                bg-center bg-cover before:absolute before:inset-0 before:bg-black/30 before:z-0"
+                style={{backgroundImage : "url('/assets/rv-with-awning-pulled-up.png')"}}>
                     <Header />
                     <TopBar />
                 </div>

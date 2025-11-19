@@ -23,7 +23,7 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16">
+    <div className="max-w-6xl mx-auto px-4 py-10">
       {/* PAGE TITLE */}
       <h1 className="text-[40px] text-[#064517] mb-10">
         Contact

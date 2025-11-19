@@ -17,12 +17,13 @@ import SupportTestimonials from "@/components/SupportTestimonials";
 import CoverageCallSection from "@/components/CoverageCallSection";
 import SmartSavingsSection from "@/components/SmartSavingsSection";
 import { getBaseUrl } from "@/lib/getBaseUrl";
+import { url } from "inspector";
 
-export async function generateMetadata(){
+export async function generateMetadata() {
   const baseUrl = getBaseUrl();
 
-  return{
-    title: "Outdoor Warranty | RV Protection Plans",
+  return {
+    title: "RV Extended Warranty - OutdoorWarranty.com",
     description: "Extended protection plans for RVs and outdoor vehicles.",
     alternates: {
       canonical: `${baseUrl}/`,
@@ -35,15 +36,16 @@ export default function HomePage() {
     <>
       {/* Fixed Header Section */}
       <div className="w-full relative">
-        {/* Wrapper to control mobile/desktop order */}
-        <div className="w-full absolute top-0 lef-0 z-50 flex flex-col md:flex-col-reverse">
 
+        {/* Background Wrapper */}
+        <div className="w-full absolute top-0 left-0 z-50 flex flex-col md:flex-col-reverse bg-center bg-cover"
+          // style={{ backgroundImage: "url('/assets/rv-with-awning-pulled-up.png')" }}
+        >
           {/* Header FIRST on mobile, SECOND on desktop */}
           <Header />
 
           {/* Top Bar SECOND on mobile, FIRST on desktop */}
           <TopBar />
-
         </div>
 
         {/* Hero Section */}
@@ -51,6 +53,7 @@ export default function HomePage() {
           <Hero />
         </section>
       </div>
+
 
       {/* Other Sections (each with its own background) */}
       <section className="bg-white">

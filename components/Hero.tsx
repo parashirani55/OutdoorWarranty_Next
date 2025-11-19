@@ -35,7 +35,7 @@ export default function Hero() {
         {/* Left Section */}
         <div className="space-y-8 sm:space-y-10 relative">
           {/* “Skip the markup!” */}
-          <div className="absolute -left-16 xl:-left-15 top-[8%] hidden md:flex flex-col items-center rotate-[-10deg]">
+          <div className="absolute -left-16 md:left-[3%] lg:-left-5 xl:-left-10 2xl:-left-15 top-[8%] hidden md:flex flex-col items-center rotate-[-10deg]">
             <span
               className={`${kalam.className} text-[#59d24f] font-normal text-[24px] lg:text-[28px] leading-tight text-center`}
               style={{ transform: "rotate(-15deg)" }}

@@ -11,24 +11,21 @@ export default function Header() {
 
   const navTop = [
     { href: "/", label: "Outdoor Warranty" },
-    { href: "/about", label: "About Us" },
+    { href: "/about-us", label: "About Us" },
     { href: "/contact", label: "Contact" },
-    { href: "/motorhome-extended-warranty", label: "Motorhome Extended Warranty" },
-    { href: "/trailer_fifth_wheel", label: "Trailer And Fifth Wheel Extended Warranty" }
+    { href: "/motorhome-extended-warranties", label: "Motorhome Extended Warranty" },
+    { href: "/trailer-and-5th-wheel-extended-warranties", label: "Trailer And Fifth Wheel Extended Warranty" }
   ];
 
   const navBottom = [
     { href: "/rv-roadside-assistance", label: "RV Road Side Assistance" },
-    { href: "/rv-tire-wheel-protection", label: "RV Tire And Wheel Protection" }
+    { href: "/rv-tire-and-wheel-protection", label: "RV Tire And Wheel Protection" }
   ];
 
   return (
     <header className={`w-full h-auto text-white transition-all duration-300 
-      ${pathname === "/"
-        ? "bg-transparent"
-        : "bg-black/45 backdrop-blur-sm"
-      }
-    `}>
+    ${pathname === "/" ? "bg-transparent" : "bg-black/45"}`}>
+    
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-6 py-4">
 
         {/* Logo */}
@@ -99,7 +96,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-[#1aac43]"
+          className="lg:hidden text-[#1aac43] z-[9999]"
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation"
         >
@@ -109,7 +106,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`w-full absolute lg:hidden z-50  bg-white text-gray-800 px-6 py-6 space-y-6 transition-all duration-300 overflow-hidden ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        className={`w-full absolute lg:hidden z-[9999]  bg-white text-gray-800 px-6 py-6 space-y-6 transition-all duration-300 overflow-hidden ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
       >
         {/* Top Navigation */}
@@ -131,7 +128,7 @@ export default function Header() {
         </div>
 
         {/* Bottom Navigation */}
-        <div className="flex flex-col gap-4 text-[14px] pt-2">
+        <div className="flex flex-col gap-4 text-[14px]">
           {navBottom.map((item) => {
             const isActive = pathname === item.href;
             return (

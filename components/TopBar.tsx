@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { MapPin, Phone, Star } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function TopBar() {
-  const texts = ["INTEREST FREE PLAN", "WHOLESALE PRICING"];
+  const texts = ["Interest Free Plan", "WHOLESALE PRICING"];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,8 +22,9 @@ export default function TopBar() {
   }, []);
 
   return (
-    <div className="w-full text-white text-sm bg-[#000000AB]">
-      <div className=" max-w-[1400px] mx-auto  flex flex-col lg:flex-row  justify-between items-center  py-2 px-4 gap-3 lg:gap-0  ">
+    <div className={`w-full text-white text-sm 
+    ${pathname === "/"? "bg-black/45" : "bg-black/80" }`}>
+      <div className=" max-w-[1400px] mx-auto  text-[12px] flex flex-col lg:flex-row  justify-between items-center  py-3 px-4 gap-3 lg:gap-0  ">
 
         {/* LEFT SIDE */}
         <div className="flex flex-col md:flex-row items-center gap-4">
@@ -35,7 +38,7 @@ export default function TopBar() {
           </div>
 
           {/* Phone — Desktop text / Mobile button */}
-          <div className="md:hidden w-full flex justify-start">
+          <div className="md:hidden w-full flex justify-start ">
             <a href="tel:5745056246" className="bg-[#48ac3f] text-white px-20 py-2 rounded-full font-semibold  flex items-center justify-start gap-2 shadow-md">
               <Phone  className="text-white w-[60px]" />
              Call 269-431-6864 For Premium Warranties!
@@ -64,7 +67,7 @@ export default function TopBar() {
           <div
             className={`transition-opacity duration-500 ${
               fade ? "opacity-100" : "opacity-0"
-            } text-white text-[12px] md:text-auto`}
+            } text-white text-[11px] md:text-auto`}
           >
             {texts[index]}
           </div>

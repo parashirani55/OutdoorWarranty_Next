@@ -9,7 +9,8 @@ export async function generateMetadata() {
   const baseUrl = getBaseUrl();
 
   return {
-    title: "Contact Us | Outdoor Warranty",
+    title: "outdoorwarranty.com/contact",
+    description: "Get in touch with Outdoor Warranty for RV protection plans, customer support, and personalized warranty quotes.",
     alternates: {
       canonical: `${baseUrl}/contact`,
     },
@@ -21,13 +22,15 @@ export default function ContactPage() {
         <>
             {/* Fixed Header Section */}
             <div className="w-full relative">
-                <div className="w-full absolute top-0 lef-0 z-50 flex flex-col md:flex-col-reverse">
+                <div className="w-full z-50 flex flex-col md:flex-col-reverse
+                bg-center bg-cover before:absolute before:inset-0 before:bg-black/30 before:z-0"
+                style={{backgroundImage : "url('/assets/rv-with-awning-pulled-up.png')"}}>
                     <Header />
                     <TopBar />
                 </div>
             </div>
 
-            <section className="bg-white pt-[10rem]">
+            <section className="bg-white">
                 <ContactSection />
             </section>
 
