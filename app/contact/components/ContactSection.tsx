@@ -120,7 +120,7 @@ export default function ContactSection() {
             <p className="flex items-center gap-2 text-gray-900">
               <i className="bi bi-envelope-fill text-[#045c1c]"></i>{" "}
               <Link
-                href="mailto:info@example.com"
+                href="mailto:outdoorwarranty@gmail.com"
                 className="hover:text-[#045c1c] font-medium"
               >
                 Email Us
@@ -147,9 +147,9 @@ export default function ContactSection() {
 
             {/* SOCIAL ICONS */}
             <div className="flex gap-4 text-2xl mt-4">
-              <Link href="#" className="text-[16px] text-white bg-[#1877f2] w-[40px] h-[40px] rounded-lg flex justify-center items-center"><i className="bi bi-facebook"></i></Link>
-              <Link href="#" className="text-[16px] text-white bg-sky-500 w-[40px] h-[40px] rounded-lg flex justify-center items-center"><i className="bi bi-twitter"></i></Link>
-              <Link href="#" className="text-[16px] text-white bg-[#0077b5] w-[40px] h-[40px] rounded-lg flex justify-center items-center"><i className="bi bi-linkedin"></i></Link>
+              <Link href="https://facebook.com/OutdoorWarranty" className="text-[16px] text-white bg-[#1877f2] w-[40px] h-[40px] rounded-lg flex justify-center items-center"><i className="bi bi-facebook"></i></Link>
+              <Link href="https://twitter.com/OutdoorWarranty" className="text-[16px] text-white bg-sky-500 w-[40px] h-[40px] rounded-lg flex justify-center items-center"><i className="bi bi-twitter"></i></Link>
+              <Link href="https://www.linkedin.com/company/outdoorwarranty-com/about/" className="text-[16px] text-white bg-[#0077b5] w-[40px] h-[40px] rounded-lg flex justify-center items-center"><i className="bi bi-linkedin"></i></Link>
             </div>
           </div>
         </div>

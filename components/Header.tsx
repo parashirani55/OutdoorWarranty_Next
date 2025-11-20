@@ -96,7 +96,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-[#1aac43] z-[9999]"
+          className="lg:hidden text-[#1aac43] z-50"
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation"
         >

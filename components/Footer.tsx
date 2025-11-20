@@ -40,7 +40,7 @@ export default function Footer() {
 
               <li>
                 <a href="tel:574-505-6246" className="flex items-center gap-2 hover:text-[#28cc1b]">
-                  <i className="bi bi-telephone-fill"></i> 269-431-6864
+                  <i className="bi bi-telephone-fill"></i> 574-505-6246
                 </a>
               </li>
 
@@ -95,7 +95,7 @@ export default function Footer() {
       </footer>
 
       {/* ================================================= */}
-      {/*                ELEMENTOR STYLE POPUP              */}
+      {/*              MAP  POPUP              */}
       {/* ================================================= */}
 
       {isMapOpen && (
