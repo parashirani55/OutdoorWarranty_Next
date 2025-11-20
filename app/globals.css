@@ -33,3 +33,15 @@ html{
 html, body {
   scroll-behavior: smooth;
 }
+
+.swal2-container {
+  z-index: 20000 !important;
+}
+
+body.swal2-shown {
+  padding-right: 0 !important;
+}
+
+.swal2-container {
+  overscroll-behavior: none;
+}

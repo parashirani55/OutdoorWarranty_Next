@@ -1,16 +1,50 @@
 "use client";
 import { Check, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Kalam } from "next/font/google";
+import Swal from "sweetalert2";
 
-const kalam = Kalam({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  display: "swap",
-});
 
 export default function Hero() {
   const [animate, setAnimate] = useState(true);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    zip: "",
+  });
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.zip.trim()
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Missing Information",
+        text: "Please fill all fields before submitting.",
+      });
+      return;
+    }
+
+    Swal.fire({
+      icon: "success",
+      title: "Submitted!",
+      text: "We have received your details.",
+    });
+
+    setFormData({ name: "", email: "", phone: "", zip: "" });
+  };
+
+
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimate(false), 3000);
@@ -31,13 +65,13 @@ export default function Hero() {
 
       {/* Main container */}
       <div className="relative z-10 max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 sm:px-6 pt-36 pb-20 items-center mt-6 sm:mt-10">
-       
+
         {/* Left Section */}
         <div className="space-y-8 sm:space-y-10 relative">
           {/* “Skip the markup!” */}
           <div className="absolute -left-16 md:left-[3%] lg:-left-5 xl:-left-10 2xl:-left-15 top-[8%] hidden md:flex flex-col items-center rotate-[-10deg]">
             <span
-              className={`${kalam.className} text-[#59d24f] font-normal text-[24px] lg:text-[28px] leading-tight text-center`}
+              className="text-[#59d24f] font-normal text-[24px] lg:text-[28px] leading-tight text-center"
               style={{ transform: "rotate(-15deg)" }}
             >
               skip the<br />markup!
@@ -175,7 +209,7 @@ export default function Hero() {
 
         {/* Right Form */}
         <div className="bg-white text-gray-900 rounded-3xl shadow-2xl p-6 sm:p-10 md:p-12 max-w-[600px] mx-auto w-full min-h-[500px] sm:min-h-[640px] flex flex-col justify-center">
-          
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 leading-tight">
             Apply for <span className="text-[#339966]">RV Extended Warranty</span>
           </h2>
@@ -187,15 +221,31 @@ export default function Hero() {
             (Or Call us at 269-431-6864 Now!)
           </p>
 
-          <form className="space-y-4 sm:space-y-5">
-            {["Name", "Email Address", "Mobile Phone Number", "Zip Code"].map((ph, i) => (
-              <input
-                key={i}
-                type="text"
-                placeholder={ph}
-                className="w-full border border-gray-300 rounded-lg p-3 sm:p-4 text-base sm:text-lg focus:ring-2 focus:ring-[#59d24f] outline-none"
-              />
-            ))}
+          <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
+
+            <input type="text"
+              placeholder="Name"
+              name="name" value={formData.name} onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg p-3 sm:p-4 text-base sm:text-lg focus:ring-2 focus:ring-[#59d24f] outline-none"
+            />
+
+            <input type="email"
+              placeholder="Email Address"
+              name="email" value={formData.email}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg p-3 sm:p-4 text-base sm:text-lg focus:ring-2 focus:ring-[#59d24f] outline-none" />
+
+            <input type="text"
+              placeholder="Mobile Phone Number"
+              name="phone" value={formData.phone}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg p-3 sm:p-4 text-base sm:text-lg focus:ring-2 focus:ring-[#59d24f] outline-none" />
+
+            <input type="text"
+              placeholder="Zip Code"
+              name="zip" value={formData.zip}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg p-3 sm:p-4 text-base sm:text-lg focus:ring-2 focus:ring-[#59d24f] outline-none" />
 
             <p className="text-left text-[10px] sm:text-xs text-gray-600 leading-relaxed mt-2">
               You agree to receive automated follow-up, reminder, and promotional messages with varying frequency. Text and data rates may apply. Reply STOP to end. Text HELP for help. Click for{" "}
@@ -216,7 +266,7 @@ export default function Hero() {
             Get Your RV Warranty in the same day.
           </p>
         </div>
-      
+
       </div>
 
       {/* Animation for ellipse */}
