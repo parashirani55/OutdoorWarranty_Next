@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
-import PrivacyPolicyForm from "./components/PrivacyPolicyForm";
 import PrivacyPolicyContent from "./components/PrivacyPolicyContent";
 import { getBaseUrl } from "@/lib/getBaseUrl";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section className="bg-white">
-                <PrivacyPolicyForm/>
+                <SaveBigRvWarrantyForm/>
             </section>
 
             {/* FOOTER */}

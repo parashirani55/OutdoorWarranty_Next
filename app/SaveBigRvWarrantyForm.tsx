@@ -1,9 +1,8 @@
 "use client";
-
 import { useState } from "react";
-import Image from "next/image";
+import Swal from "sweetalert2";
 
-export default function AboutForm() {
+export default function SaveBigRvWarrantyForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,12 +16,33 @@ export default function AboutForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+
+    // Required Validation
+    if (!formData.name || !formData.email || !formData.phone || !formData.zip) {
+      Swal.fire({
+        icon: "warning",
+        title: "Required",
+        text: "Please fill all required fields.",
+      });
+      return;
+    }
+
+    // Only testing – no API call
+    Swal.fire({
+      icon: "success",
+      title: "Form Submitted!",
+      text: "Test success – email sending disabled.",
+    });
+
+    // Reset form
+    setFormData({ name: "", email: "", phone: "", zip: "" });
   };
 
   return (
-    <div className="max-w-[749px] mx-auto shadow-2xl p-6 sm:p-8 rounded-2xl bg-white mb-20 mt-10 w-[95%] sm:w-[90%] md:w-auto">
-      
+    <div
+      id="warranty-form"
+      className="max-w-[749px] mx-auto shadow-2xl p-6 sm:p-8 rounded-2xl bg-white mb-20 mt-10 w-[95%] sm:w-[90%] md:w-auto"
+    >
       {/* Top Title */}
       <p className="text-[14px] sm:text-[16px] font-semibold mb-2 text-center italic leading-snug">
         👉 <span className="text-[#045c1c]">Call Us 574–505–6246</span>
@@ -38,14 +58,12 @@ export default function AboutForm() {
 
       {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-4">
-        
         <input
           type="text"
           name="name"
           placeholder="Name"
           onChange={handleChange}
           value={formData.name}
-          required
           className="w-full border border-gray-300 rounded-md p-3 placeholder-gray-500 text-[14px] sm:text-[16px]"
         />
 
@@ -55,7 +73,6 @@ export default function AboutForm() {
           placeholder="Email Address"
           onChange={handleChange}
           value={formData.email}
-          required
           className="w-full border border-gray-300 rounded-md p-3 placeholder-gray-500 text-[14px] sm:text-[16px]"
         />
 
@@ -65,7 +82,6 @@ export default function AboutForm() {
           placeholder="Mobile Phone Number"
           onChange={handleChange}
           value={formData.phone}
-          required
           className="w-full border border-gray-300 rounded-md p-3 placeholder-gray-500 text-[14px] sm:text-[16px]"
         />
 
@@ -79,10 +95,15 @@ export default function AboutForm() {
         />
 
         <p className="text-xs text-[#09360c] leading-relaxed">
-          You agree to receive automated follow-up, reminder, and promotional messages with varying frequency. Text and data rates may apply. Reply STOP to end. Text HELP for help. Click for{" "}
-          <a href="/terms" className="text-green-700 underline">Terms of Service</a>{" "}
+          You agree to receive automated follow-up, reminder, and promotional messages with varying frequency.
+          Text and data rates may apply. Reply STOP to end. Text HELP for help. Click for{" "}
+          <a href="/terms" className="text-green-700 underline">
+            Terms of Service
+          </a>{" "}
           and{" "}
-          <a href="/privacy-policy" className="text-green-700 underline">Privacy Policy</a>.
+          <a href="/privacy-policy" className="text-green-700 underline">
+            Privacy Policy
+          </a>.
         </p>
 
         <div className="flex justify-center items-center">
@@ -93,7 +114,6 @@ export default function AboutForm() {
             Claim Your Savings Now! 👉
           </button>
         </div>
-
       </form>
     </div>
   );

@@ -2,9 +2,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import TrailerAndFifthWheelHero from "./components/TrailerAndFifthWheelHero";
-import TrailerAndFifthWheelForm from "./components/TrailerAndFifthWheelForm";
 import TrailerAndFifthWheelContent from "./components/TrailerAndFifthWheelContent";
 import { getBaseUrl } from "@/lib/getBaseUrl";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
@@ -40,7 +40,7 @@ export default function TrailerFifthwheelPage() {
         
 
             <section className="bg-white">
-                <TrailerAndFifthWheelForm/>
+                <SaveBigRvWarrantyForm/>
             </section>
 
             {/* FOOTER */}

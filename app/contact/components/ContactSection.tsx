@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Swal from "sweetalert2";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,26 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
+
+    // Required Validation
+    if (!formData.name || !formData.subject || !formData.email) {
+      Swal.fire({
+        icon: "warning",
+        title: "Required",
+        text: "Please fill all required fields.",
+      });
+      return;
+    }
+
+    // Only testing – no API call
+    Swal.fire({
+      icon: "success",
+      title: "Form Submitted!",
+      text: "Test success – email sending disabled.",
+    });
+
+    // Reset form
+    setFormData({ name: "", subject: "", email: "", message: "" });
   };
 
   return (
@@ -55,7 +76,7 @@ export default function ContactSection() {
               onChange={handleChange}
               value={formData.name}
               className="border border-gray-300 rounded-md p-3 placeholder-gray-500"
-              required
+            
             />
 
             <input
@@ -65,7 +86,6 @@ export default function ContactSection() {
               onChange={handleChange}
               value={formData.subject}
               className="border border-gray-300 rounded-md p-3 placeholder-gray-500"
-              required
             />
 
             <input
@@ -75,7 +95,6 @@ export default function ContactSection() {
               onChange={handleChange}
               value={formData.email}
               className="border border-gray-300 rounded-md p-3 placeholder-gray-500"
-              required
             />
 
             <textarea
@@ -85,8 +104,7 @@ export default function ContactSection() {
               onChange={handleChange}
               value={formData.message}
               className="border border-gray-300 rounded-md p-3 placeholder-gray-500"
-              required
-            ></textarea>
+              ></textarea>
 
             <button
               type="submit"

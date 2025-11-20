@@ -255,7 +255,7 @@ export default function Hero() {
 
             <button
               type="submit"
-              className="w-full bg-[#59d24f] hover:bg-[#40d61e] text-white font-semibold py-4 sm:py-5 px-6 sm:px-8 rounded-full transition text-lg sm:text-xl flex justify-center items-center gap-2 shadow-md mt-3"
+              className="w-full bg-[#59d24f] hover:bg-[#40d61e] text-white font-semibold py-4 sm:py-5 px-6 sm:px-8 rounded-full transition text-lg sm:text-xl flex justify-center items-center gap-2 shadow-md mt-3 cursor-pointer"
             >
               Claim Your Savings Now! 👉
             </button>

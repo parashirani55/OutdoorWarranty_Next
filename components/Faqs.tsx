@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Swal from "sweetalert2";
 
 export default function Faqs() {
   const faqs = [
@@ -85,11 +86,10 @@ export default function Faqs() {
                   className="w-full flex items-start sm:items-center text-left gap-3 text-[#09360c] font-medium focus:outline-none"
                 >
                   <i
-                    className={`bi ${
-                      activeIndex === index
+                    className={`bi ${activeIndex === index
                         ? "bi-caret-up-fill rotate-180 text-[#045c1c]"
                         : "bi-caret-right-fill text-[#045c1c]"
-                    } text-[16px] sm:text-[18px] transition-transform duration-300`}
+                      } text-[16px] sm:text-[18px] transition-transform duration-300`}
                   ></i>
                   <span className="text-[15px] sm:text-[16px] md:text-[17px] font-semibold text-[#045c1c] leading-snug">
                     {faq.question}
@@ -97,11 +97,10 @@ export default function Faqs() {
                 </button>
 
                 <div
-                  className={`pl-7 sm:pl-9 pr-2 text-[14px] sm:text-[15px] text-[#09360c] leading-relaxed transition-all duration-300 ease-in-out ${
-                    activeIndex === index
+                  className={`pl-7 sm:pl-9 pr-2 text-[14px] sm:text-[15px] text-[#09360c] leading-relaxed transition-all duration-300 ease-in-out ${activeIndex === index
                       ? "max-h-[400px] opacity-100 mt-2"
                       : "max-h-0 opacity-0 overflow-hidden"
-                  }`}
+                    }`}
                 >
                   {faq.answer}
                 </div>
@@ -114,7 +113,7 @@ export default function Faqs() {
       {/* === Popup Modal === */}
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-[9999] p-4 transition-opacity">
-          
+
           <div className="bg-white rounded-2xl shadow-xl max-w-[650px] w-full p-6 relative animate-fadeIn">
             {/* Close Button */}
             <button onClick={() => setIsPopupOpen(false)}
@@ -133,18 +132,60 @@ export default function Faqs() {
             </div>
 
             {/* === Form === */}
-            <form className="space-y-4 flex flex-col items-center">
+            <form
+              className="space-y-4 flex flex-col items-center"
+              onSubmit={(e) => {
+                e.preventDefault();
+
+                const name = (e.target as any).name.value.trim();
+                const email = (e.target as any).email.value.trim();
+                const message = (e.target as any).message.value.trim();
+
+                if (!name || !email || !message) {
+                  Swal.fire({
+                    icon: "error",
+                    title: "Missing Fields",
+                    text: "Please fill all fields before submitting.",
+                    heightAuto: false,
+                    didOpen: () => {
+                      const swal = document.querySelector(".swal2-container") as HTMLElement;
+                      if (swal) swal.style.zIndex = "999999999";
+                    },
+                  });
+                  return;
+                }
+
+                Swal.fire({
+                  icon: "success",
+                  title: "Form Submitted!",
+                  text: "We have received your message.",
+                  heightAuto: false,
+                  didOpen: () => {
+                    const swal = document.querySelector(".swal2-container") as HTMLElement;
+                    if (swal) swal.style.zIndex = "999999999";
+                  },
+                });
+
+                (e.target as any).reset();
+                setIsPopupOpen(false);
+              }}
+            >
               <input
+                name="name"
                 type="text"
                 placeholder="Name"
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#28cc1b]"
               />
+
               <input
+                name="email"
                 type="email"
                 placeholder="Email Address"
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#28cc1b]"
               />
+
               <textarea
+                name="message"
                 placeholder="Your Message"
                 rows={4}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#28cc1b]"

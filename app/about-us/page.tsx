@@ -2,8 +2,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import AboutContent from "./components/AboutContent";
-import AboutForm from "./components/AboutForm";
 import { getBaseUrl } from "@/lib/getBaseUrl";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
 
 
 export async function generateMetadata() {
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
       {/* FORM SECTION */}
       <section className="mt-5">
-        <AboutForm />
+        <SaveBigRvWarrantyForm/>
       </section>
 
       {/* FOOTER */}

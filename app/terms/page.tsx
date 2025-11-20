@@ -2,8 +2,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import { getBaseUrl } from "@/lib/getBaseUrl";
-import TermsForm from "./components/TermsForm";
+
 import TermsContent from "./components/TermsContent";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
@@ -36,7 +37,7 @@ export default function TermsPage() {
             </section>
 
             <section className="bg-white">
-                <TermsForm/>
+                <SaveBigRvWarrantyForm/>
             </section>
 
             {/* FOOTER */}

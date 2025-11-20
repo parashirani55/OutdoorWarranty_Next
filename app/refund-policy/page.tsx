@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import { getBaseUrl } from "@/lib/getBaseUrl";
 import RefundPolicyContent from "./components/RefundPolicyContent";
-import RefundPolicyForm from "./components/RefundPolicyForm";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
+
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
@@ -36,7 +37,7 @@ export default function RefundPolicyPage() {
             </section>
 
             <section className="bg-white">
-                <RefundPolicyForm/>
+                <SaveBigRvWarrantyForm/>
             </section>
 
             {/* FOOTER */}

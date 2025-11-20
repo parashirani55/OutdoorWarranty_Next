@@ -2,8 +2,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import { getBaseUrl } from "@/lib/getBaseUrl";
-import FaqForm from "./components/FaqForm";
 import FooterFaqs from "./components/FooterFaqs";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
@@ -36,7 +36,7 @@ export default function RefundPolicyPage() {
             </section>
 
             <section className="bg-white">
-                <FaqForm/>
+                <SaveBigRvWarrantyForm/>
             </section>
 
             {/* FOOTER */}

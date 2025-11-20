@@ -217,7 +217,7 @@ export default function RvTireWheelProtectionContent() {
 
 
                 {/*========== table-compo ===============*/}
-                <RvTireWheelProtectionTable/>
+                <RvTireWheelProtectionTable />
 
 
                 {/* SECTION 13*/}
@@ -281,15 +281,18 @@ export default function RvTireWheelProtectionContent() {
 
                 {/* SECTION 17*/}
                 <h3 className="text-[28px] my-4 text-[#064517] leading-9">
-                Where can you get RV tires and Wheel Protection?
+                    Where can you get RV tires and Wheel Protection?
                 </h3>
                 <p className="mb-4">
-                You can get RV Tire and Wheel Protection at Outdoor Warranty, a platform that offers direct access to customizable coverage plans without dealership markups. Buyers select from one to seven-year terms with transparent pricing, no mileage limits, and zero deductibles. The site allows easy online enrollment and provides full access to contract documents, claim instructions, and support channels.
+                    You can get RV Tire and Wheel Protection at Outdoor Warranty, a platform that offers direct access to customizable coverage plans without dealership markups. Buyers select from one to seven-year terms with transparent pricing, no mileage limits, and zero deductibles. The site allows easy online enrollment and provides full access to contract documents, claim instructions, and support channels.
                 </p>
 
                 <p className="mb-6">
-                Outdoor Warranty offers what buyers consider the <strong>best tire and wheel protection plan</strong> for RV owners by combining broad coverage with clear terms. The plan provided by <strong>Outdoor Warranty</strong> includes roadside assistance, rim repair, tire replacement, and mounting services with fast claims approval. The direct-to-consumer model eliminates hidden fees and allows owners to manage coverage at their own pace, making it a dependable solution for regular travelers or full-time RV users. Get covered now, explore Outdoor Warranty plans, and keep every mile worry-free.
+                    Outdoor Warranty offers what buyers consider the <strong>best tire and wheel protection plan</strong> for RV owners by combining broad coverage with clear terms. The plan provided by <strong>Outdoor Warranty</strong> includes roadside assistance, rim repair, tire replacement, and mounting services with fast claims approval. The direct-to-consumer model eliminates hidden fees and allows owners to manage coverage at their own pace, making it a dependable solution for regular travelers or full-time RV users. Get covered now, explore Outdoor Warranty plans, and keep every mile worry-free.
                 </p>
+
+                {/* Divider */}
+                <div className="w-full border-b-10 border-green-600 my-10"></div>
 
             </section>
         </>

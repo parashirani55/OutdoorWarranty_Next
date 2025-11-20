@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function TrailerAndFifthWheelContent() {
 
@@ -17,10 +18,29 @@ export default function TrailerAndFifthWheelContent() {
     };
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log("Form Data Submitted:", formData);
-    };
-
+       e.preventDefault();
+   
+       // Required Validation
+       if (!formData.name || !formData.email || !formData.phone || !formData.zip) {
+         Swal.fire({
+           icon: "warning",
+           title: "Required",
+           text: "Please fill all required fields.",
+         });
+         return;
+       }
+   
+       // Only testing – no API call
+       Swal.fire({
+         icon: "success",
+         title: "Form Submitted!",
+         text: "Test success – email sending disabled.",
+       });
+   
+       // Reset form
+       setFormData({ name: "", email: "", phone: "", zip: "" });
+     };
+   
 
     return (
         <>
@@ -118,37 +138,41 @@ export default function TrailerAndFifthWheelContent() {
                         </div>
 
                         {/* FORM */}
-                        <form className="space-y-3">
+                        <form className="space-y-3" onSubmit={handleSubmit}>
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Name"
                                 onChange={handleChange}
                                 value={formData.name}
-                                required
+                                
                                 className="w-full border rounded-md px-3 py-2"
                             />
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Email Address"
                                 onChange={handleChange}
                                 value={formData.email}
-                                required
+                            
                                 className="w-full border rounded-md px-3 py-2"
                             />
                             <input
                                 type="tel"
+                                name="phone"
                                 placeholder="Mobile Phone Number"
                                 onChange={handleChange}
                                 value={formData.phone}
-                                required
+                         
                                 className="w-full border rounded-md px-3 py-2"
                             />
                             <input
                                 type="text"
+                                name="zip"
                                 placeholder="Zip Code"
                                 onChange={handleChange}
                                 value={formData.zip}
-                                required
+                             
                                 className="w-full border rounded-md px-3 py-2"
                             />
 

@@ -3,8 +3,8 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import MotorhomeWarranty from "./components/MotorhomeWarranty";
 import MotorhomeWarrantyContent from "./components/MotorhomeWarrantyContent";
-import MotorhomeWarrantyForm from "./components/MotorhomeWarrantyForm";
 import { getBaseUrl } from "@/lib/getBaseUrl";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
 
 export async function generateMetadata() {
   const baseUrl = getBaseUrl();
@@ -40,7 +40,7 @@ export default function MotorhomePage() {
             </section>
 
             <section className="bg-white">
-                <MotorhomeWarrantyForm />
+                <SaveBigRvWarrantyForm/>
             </section>
 
             {/* FOOTER */}

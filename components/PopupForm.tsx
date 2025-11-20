@@ -151,8 +151,8 @@ export default function PopupForm({ show, onClose }: PopupFormProps) {
                     </p>
 
                     <button
-                        type="submit"
-                        className="w-full bg-[#48ac3f] hover:bg-[#3fa039] text-white py-3 rounded-full text-[15px] sm:text-[17px] font-semibold transition"
+                        type="submit"   
+                        className="w-full bg-[#48ac3f] hover:bg-[#3fa039] text-white py-3 rounded-full text-[15px] sm:text-[17px] font-semibold transition cursor-pointer"
                     >
                         Claim Your Savings Now! 👉
                     </button>

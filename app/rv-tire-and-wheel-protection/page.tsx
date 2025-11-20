@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import RvTireWheelProtectionHero from "./components/RvTireWheelProtectionHero";
 import RvTireWheelProtectionContent from "./components/RvTireWheelProtectionContent";
-import RvTireWheelProtectionForm from "./components/RvTireWheelProtectionForm";
 import { getBaseUrl } from "@/lib/getBaseUrl";
+import SaveBigRvWarrantyForm from "../SaveBigRvWarrantyForm";
 
 export async function generateMetadata(){
     const baseUrl = getBaseUrl();
@@ -39,7 +39,7 @@ export default function RvTireWheelProtection() {
             </section>
         
             <section className="bg-white">
-                <RvTireWheelProtectionForm/>
+                <SaveBigRvWarrantyForm/>
             </section>
 
             {/* FOOTER */}
