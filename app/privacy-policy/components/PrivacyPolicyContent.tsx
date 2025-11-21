@@ -1,3 +1,5 @@
+"use client";
+
 export default function PrivacyPolicyContent() {
     return (
         <section className="max-w-[728px] mx-auto px-4 leading-relaxed text-[#09360c] pt-10">

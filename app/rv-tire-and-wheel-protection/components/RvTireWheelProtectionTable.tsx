@@ -1,3 +1,5 @@
+"use client";
+
 export default function RvTireWheelProtectionTable() {
   const rows = [
     { feature: "Road hazard tire damage", tire: "Yes", rv: "No" },

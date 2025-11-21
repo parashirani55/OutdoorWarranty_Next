@@ -1,3 +1,5 @@
+"use client";
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 bg-white">

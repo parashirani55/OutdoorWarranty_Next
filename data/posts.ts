@@ -1,3 +1,5 @@
+"use client";
+
 export type BlogPost = {
   id: number;
   slug: string;

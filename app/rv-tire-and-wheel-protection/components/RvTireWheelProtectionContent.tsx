@@ -1,3 +1,4 @@
+"use client";
 import RvTireWheelProtectionTable from "./RvTireWheelProtectionTable";
 
 export default function RvTireWheelProtectionContent() {

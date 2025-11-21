@@ -1,3 +1,5 @@
+"use client";
+
 export default function CTAForm() {
   return (
     <section id="quote" className="py-20 bg-blue-600 text-white text-center">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Poppins } from "next/font/google";
-import PageLoader from "@/components/PageLoader";
+// import PageLoader from "@/components/PageLoader";
 // import LenisProvider from "@/components/LenisProvider";
 
 const poppins = Poppins({
