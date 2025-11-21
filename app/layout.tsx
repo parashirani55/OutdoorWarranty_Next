@@ -36,7 +36,7 @@ export default function RootLayout({
       </head>
 
       <body cz-shortcut-listen="true" className="text-gray-900 bg-white min-h-screen antialiased overflow-x-hidden">
-        <PageLoader />
+        {/* <PageLoader /> */}
         {/* <LenisProvider> */}
           {children}
           {/* </LenisProvider> */}
